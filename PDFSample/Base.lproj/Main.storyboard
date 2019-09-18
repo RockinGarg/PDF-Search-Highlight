@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PDFSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uh-nQ-t7y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dui-1D-iWR">
+                                        <rect key="frame" x="13" y="57" width="388" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="searchTFEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="St2-9s-45T"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Dui-1D-iWR" secondAttribute="trailing" constant="5" id="71Q-bv-khG"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Dui-1D-iWR" secondAttribute="bottom" constant="5" id="JmE-GL-1qF"/>
+                                    <constraint firstItem="Dui-1D-iWR" firstAttribute="top" secondItem="8Uh-nQ-t7y" secondAttribute="topMargin" constant="5" id="SXc-Rl-62H"/>
+                                    <constraint firstItem="Dui-1D-iWR" firstAttribute="leading" secondItem="8Uh-nQ-t7y" secondAttribute="leadingMargin" constant="5" id="v4k-JX-VJF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTl-nx-5GV">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Uh-nQ-t7y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="14m-ki-DbR"/>
+                            <constraint firstItem="nTl-nx-5GV" firstAttribute="top" secondItem="8Uh-nQ-t7y" secondAttribute="bottom" id="7Kb-ss-8JK"/>
+                            <constraint firstItem="nTl-nx-5GV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QT7-Nb-i0W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nTl-nx-5GV" secondAttribute="bottom" id="XcR-rS-XEZ"/>
+                            <constraint firstItem="8Uh-nQ-t7y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jUy-yH-KeQ"/>
+                            <constraint firstItem="8Uh-nQ-t7y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yPI-I7-eEB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nTl-nx-5GV" secondAttribute="trailing" id="yVO-Ig-fhI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pdfBaseView" destination="nTl-nx-5GV" id="L5K-Gd-H1M"/>
+                        <outlet property="pdfBaseViewBottomConstraint" destination="XcR-rS-XEZ" id="eSx-Vh-aQ4"/>
+                        <outlet property="searchTF" destination="Dui-1D-iWR" id="csb-hU-nTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
